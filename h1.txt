@@ -1,0 +1,57 @@
+Linux terminal
+Вот сценарий который надо уметь делать
+
+1) Посмотреть где я pwd
+2) Создать папку mkdir test
+3) Зайти в папку $ cd c:users/100nout.by/test
+4) Создать 3 папки mkdir first Project project1
+5) Зайти в любоую папку cd first
+6) Создать 5 файлов (3 txt, 2 json) touch 1.txt 2.txt 3.txt 1.js 2.js
+7) Создать 3 папки mkdir cherry1 cherry2 cherry3
+8. Вывести список содержимого папки  ls first
+9) + Открыть любой txt файл nano 1.txt 
+10) + написать туда что-нибудь, любой текст. our group are the best!!
+11) + сохранить и выйти.  f3 and f2
+12) Выйти из папки на уровень выше  cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.   mv first/1.txt first/1.js project1
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. $ cp first/2.txt first/2.js Project
+15) Найти файл по имени  find . -name '1.txt'
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. $ cat 1.txt
+our group are the best!!
+
+17) вывести несколько первых строк из текстового файла 
+$ head 1.txt
+our group are the best!!
+наша группа самая лучшая
+we are the winners!
+our first homework very difficult for me
+123
+456
+789
+лалалалалалала
+18) вывести несколько последних строк из текстового файла
+ $ tail 1.txt
+our first homework very difficult for me
+123
+456
+789
+лалалалалалалала
+I like our group
+1 love my friends
+i love my hobbies
+all be good!
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+ $ less 1.txt
+
+[1]+  Stopped                 less 1.txt
+
+20) вывести дату и время 
+$ date
+Mon May 31 18:19:19     2021
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+https://api.quarantine.country/api/v1/regions  curl https://api.quarantine.country/api/v1/regions
