@@ -1,0 +1,755 @@
+{
+	"info": {
+		"_postman_id": "82051b97-046c-486c-a9e0-e9a4eadf7e36",
+		"name": "reguests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "R1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.203.27.46:5002/get_method?name=Liliya&age=45",
+							"protocol": "http",
+							"host": [
+								"116",
+								"203",
+								"27",
+								"46"
+							],
+							"port": "5002",
+							"path": [
+								"get_method"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Liliya"
+								},
+								{
+									"key": "age",
+									"value": "45"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Post  login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.203.27.46:5002/?login=Liliya&password=123",
+							"protocol": "http",
+							"host": [
+								"116",
+								"203",
+								"27",
+								"46"
+							],
+							"port": "5002",
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "login",
+									"value": "Liliya"
+								},
+								{
+									"key": "password",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post  R token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{'start_qa_salary':salary,\r\n 'qa_salary_after_6_months': salary * 2,\r\n 'qa_salary_after_12_months': salary * 2.9,\r\n 'person': {'u_name':[user_name, salary, age],\r\n                                'u_age':age,\r\n                                'u_salary_1.5_year': salary * 4}\r\n                                }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.203.27.46:5002/login?name=привет",
+							"protocol": "http",
+							"host": [
+								"116",
+								"203",
+								"27",
+								"46"
+							],
+							"port": "5002",
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "привет"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Post  R token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{'start_qa_salary':salary,\r\n 'qa_salary_after_6_months': salary * 2,\r\n 'qa_salary_after_12_months': salary * 2.9,\r\n 'person': {'u_name':[user_name, salary, age],\r\n                                'u_age':age,\r\n                                'u_salary_1.5_year': salary * 4}\r\n                                }\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://116.203.27.46:5002/login?name=привет",
+									"protocol": "http",
+									"host": [
+										"116",
+										"203",
+										"27",
+										"46"
+									],
+									"port": "5002",
+									"path": [
+										"login"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "привет"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.15.6 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Jun 2021 21:06:40 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"/s34lfgbj/None/jjd909/48182kjkWpqc3055None197972evny\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Post R user_info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.203.27.46:5002/user_info?age=45&salary=500&name=Liliya&auth_token=\"/s34lfgbj/None/jjd909/20190kjkWpqc3686None268594evny\"",
+							"protocol": "http",
+							"host": [
+								"116",
+								"203",
+								"27",
+								"46"
+							],
+							"port": "5002",
+							"path": [
+								"user_info"
+							],
+							"query": [
+								{
+									"key": "age",
+									"value": "45"
+								},
+								{
+									"key": "salary",
+									"value": "500"
+								},
+								{
+									"key": "name",
+									"value": "Liliya"
+								},
+								{
+									"key": "auth_token",
+									"value": "\"/s34lfgbj/None/jjd909/20190kjkWpqc3686None268594evny\""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Post R user_info",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"age\": 45,\r\n    \"salary\" : 500,\r\n    \"name\": \"Liliya\",\r\n    \"auth_token\" : \"/s34lfgbj/None/jjd909/48182kjkWpqc3055None197972evny\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://116.203.27.46:5002/user_info",
+									"protocol": "http",
+									"host": [
+										"116",
+										"203",
+										"27",
+										"46"
+									],
+									"port": "5002",
+									"path": [
+										"user_info"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "236"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.15.6 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jun 2021 09:46:55 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"person\": {\n        \"u_age\": 45,\n        \"u_name\": [\n            \"Liliya\",\n            500,\n            45\n        ],\n        \"u_salary_1_5_year\": 2000\n    },\n    \"qa_salary_after_12_months\": 1450,\n    \"qa_salary_after_6_months\": 1000,\n    \"start_qa_salary\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "new_data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\" : 50,\r\n    \"salary\" : 500,\r\n    \"name\" : \"Liliya\",\r\n    \"auth_yoken\" : \"/s34lfgbj/None/jjd909/48182kjkWpqc3055None197972evny\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.203.27.46:5002//new_data",
+							"protocol": "http",
+							"host": [
+								"116",
+								"203",
+								"27",
+								"46"
+							],
+							"port": "5002",
+							"path": [
+								"",
+								"new_data"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "new_data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "45",
+											"type": "text"
+										},
+										{
+											"key": "salary",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Liliya",
+											"type": "text"
+										},
+										{
+											"key": "auth_token",
+											"value": "/s34lfgbj/None/jjd909/48182kjkWpqc3055None197972evny",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://116.203.27.46:5002/new_data",
+									"protocol": "http",
+									"host": [
+										"116",
+										"203",
+										"27",
+										"46"
+									],
+									"port": "5002",
+									"path": [
+										"new_data"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.15.6 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jun 2021 09:34:32 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"age\": 45,\n    \"name\": \"Liliya\",\n    \"salary\": [\n        500,\n        \"1000\",\n        \"1500\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "test_pet_info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": null
+					},
+					"response": [
+						{
+							"name": "test_pet_info",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "45",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Liliya",
+											"type": "text"
+										},
+										{
+											"key": "auth_token",
+											"value": " \"/s34lfgbj/None/jjd909/48182kjkWpqc3055None197972evny\"",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://116.203.27.46:5002/test_pet_info",
+									"protocol": "http",
+									"host": [
+										"116",
+										"203",
+										"27",
+										"46"
+									],
+									"port": "5002",
+									"path": [
+										"test_pet_info"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "84"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.15.6 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jun 2021 10:24:15 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"age\": 45,\n    \"daily_food\": 0.6,\n    \"daily_sleep\": 125,\n    \"name\": \"Liliya\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get_test_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "age",
+									"value": "45",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Liliya",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": " \"/s34lfgbj/None/jjd909/48182kjkWpqc3055None197972evny\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://116.203.27.46:5002/get_test_user",
+							"protocol": "http",
+							"host": [
+								"116",
+								"203",
+								"27",
+								"46"
+							],
+							"port": "5002",
+							"path": [
+								"get_test_user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get_test_user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "45",
+											"type": "text"
+										},
+										{
+											"key": "salary",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Liliya",
+											"type": "text"
+										},
+										{
+											"key": "auth_token",
+											"value": " \"/s34lfgbj/None/jjd909/48182kjkWpqc3055None197972evny\"",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://116.203.27.46:5002/get_test_user",
+									"protocol": "http",
+									"host": [
+										"116",
+										"203",
+										"27",
+										"46"
+									],
+									"port": "5002",
+									"path": [
+										"get_test_user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.15.6 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jun 2021 10:45:44 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"age\": \"45\",\n    \"family\": {\n        \"children\": [\n            [\n                \"Alex\",\n                24\n            ],\n            [\n                \"Kate\",\n                12\n            ]\n        ],\n        \"u_salary_1_5_year\": 2000\n    },\n    \"name\": \"Liliya\",\n    \"salary\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "currency",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": null
+					},
+					"response": [
+						{
+							"name": "currency",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "auth_token",
+											"value": " \"/s34lfgbj/None/jjd909/48182kjkWpqc3055None197972evny\"",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://116.203.27.46:5002/currency",
+									"protocol": "http",
+									"host": [
+										"116",
+										"203",
+										"27",
+										"46"
+									],
+									"port": "5002",
+									"path": [
+										"currency"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35833"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.15.6 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jun 2021 10:58:09 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"Cur_Abbreviation\": \"ALL\",\n        \"Cur_ID\": 1,\n        \"Cur_Name\": \"Албанский лек\"\n    },\n    {\n        \"Cur_Abbreviation\": \"DZD\",\n        \"Cur_ID\": 2,\n        \"Cur_Name\": \"Алжирский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ARS\",\n        \"Cur_ID\": 5,\n        \"Cur_Name\": \"Аргентинское песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"BGL\",\n        \"Cur_ID\": 6,\n        \"Cur_Name\": \"Болгарский лев\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ATS\",\n        \"Cur_ID\": 7,\n        \"Cur_Name\": \"Австрийский шиллинг\"\n    },\n    {\n        \"Cur_Abbreviation\": \"BEF\",\n        \"Cur_ID\": 12,\n        \"Cur_Name\": \"Бельгийский франк\"\n    },\n    {\n        \"Cur_Abbreviation\": \"EUR\",\n        \"Cur_ID\": 19,\n        \"Cur_Name\": \"Евро\"\n    },\n    {\n        \"Cur_Abbreviation\": \"CAD\",\n        \"Cur_ID\": 23,\n        \"Cur_Name\": \"Канадский доллар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LKR\",\n        \"Cur_ID\": 26,\n        \"Cur_Name\": \"Шри-Ланкийская рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"CLP\",\n        \"Cur_ID\": 27,\n        \"Cur_Name\": \"Чилийское песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"CNY\",\n        \"Cur_ID\": 28,\n        \"Cur_Name\": \"Китайский юань\"\n    },\n    {\n        \"Cur_Abbreviation\": \"COP\",\n        \"Cur_ID\": 29,\n        \"Cur_Name\": \"Колумбийское песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"CYP\",\n        \"Cur_ID\": 35,\n        \"Cur_Name\": \"Кипрский фунт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"DKK\",\n        \"Cur_ID\": 36,\n        \"Cur_Name\": \"Датская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ETB\",\n        \"Cur_ID\": 40,\n        \"Cur_Name\": \"Эфиопский быр\"\n    },\n    {\n        \"Cur_Abbreviation\": \"FIM\",\n        \"Cur_ID\": 43,\n        \"Cur_Name\": \"Финляндская марка\"\n    },\n    {\n        \"Cur_Abbreviation\": \"FRF\",\n        \"Cur_ID\": 44,\n        \"Cur_Name\": \"Французский франк\"\n    },\n    {\n        \"Cur_Abbreviation\": \"GEL\",\n        \"Cur_ID\": 46,\n        \"Cur_Name\": \"Грузинский лари\"\n    },\n    {\n        \"Cur_Abbreviation\": \"GRD\",\n        \"Cur_ID\": 51,\n        \"Cur_Name\": \"Греческая драхма\"\n    },\n    {\n        \"Cur_Abbreviation\": \"HKD\",\n        \"Cur_ID\": 57,\n        \"Cur_Name\": \"Гонконгский доллар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ISK\",\n        \"Cur_ID\": 58,\n        \"Cur_Name\": \"Исландская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"INR\",\n        \"Cur_ID\": 59,\n        \"Cur_Name\": \"Индийская рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"IRR\",\n        \"Cur_ID\": 61,\n        \"Cur_Name\": \"Иранский риал\"\n    },\n    {\n        \"Cur_Abbreviation\": \"IQD\",\n        \"Cur_ID\": 62,\n        \"Cur_Name\": \"Иракcкий динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"IEP\",\n        \"Cur_ID\": 63,\n        \"Cur_Name\": \"Ирландский фунт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ILS\",\n        \"Cur_ID\": 64,\n        \"Cur_Name\": \"Новый израильский шекель\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ITL\",\n        \"Cur_ID\": 65,\n        \"Cur_Name\": \"Итальянская лира\"\n    },\n    {\n        \"Cur_Abbreviation\": \"JPY\",\n        \"Cur_ID\": 67,\n        \"Cur_Name\": \"Иена\"\n    },\n    {\n        \"Cur_Abbreviation\": \"JOD\",\n        \"Cur_ID\": 68,\n        \"Cur_Name\": \"Иорданский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KES\",\n        \"Cur_ID\": 69,\n        \"Cur_Name\": \"Кенийский шиллинг\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KRW\",\n        \"Cur_ID\": 71,\n        \"Cur_Name\": \"Южнокорейская вона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KWD\",\n        \"Cur_ID\": 72,\n        \"Cur_Name\": \"Кувейтский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LAK\",\n        \"Cur_ID\": 73,\n        \"Cur_Name\": \"Лаосский кип\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LBP\",\n        \"Cur_ID\": 74,\n        \"Cur_Name\": \"Ливанский фунт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LYD\",\n        \"Cur_ID\": 77,\n        \"Cur_Name\": \"Ливийcкий динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LUF\",\n        \"Cur_ID\": 78,\n        \"Cur_Name\": \"Люксембургский франк\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MXN\",\n        \"Cur_ID\": 87,\n        \"Cur_Name\": \"Мексиканское новое песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MNT\",\n        \"Cur_ID\": 88,\n        \"Cur_Name\": \"Монгольский тугрик\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MAD\",\n        \"Cur_ID\": 89,\n        \"Cur_Name\": \"Марокканский дирхам\"\n    },\n    {\n        \"Cur_Abbreviation\": \"NPR\",\n        \"Cur_ID\": 93,\n        \"Cur_Name\": \"Непальcкая рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"NLG\",\n        \"Cur_ID\": 94,\n        \"Cur_Name\": \"Нидерландский гульден\"\n    },\n    {\n        \"Cur_Abbreviation\": \"NZD\",\n        \"Cur_ID\": 98,\n        \"Cur_Name\": \"Новозеландский доллар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"NGN\",\n        \"Cur_ID\": 100,\n        \"Cur_Name\": \"Нигерийская найра\"\n    },\n    {\n        \"Cur_Abbreviation\": \"NOK\",\n        \"Cur_ID\": 101,\n        \"Cur_Name\": \"Норвежская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PKR\",\n        \"Cur_ID\": 102,\n        \"Cur_Name\": \"Пакистанская рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PEN\",\n        \"Cur_ID\": 106,\n        \"Cur_Name\": \"Перуанский новый соль\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PHP\",\n        \"Cur_ID\": 107,\n        \"Cur_Name\": \"Филиппинcкое песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PLZ\",\n        \"Cur_ID\": 108,\n        \"Cur_Name\": \"Польский злотый\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PTE\",\n        \"Cur_ID\": 109,\n        \"Cur_Name\": \"Португальcкое эскудо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SAR\",\n        \"Cur_ID\": 116,\n        \"Cur_Name\": \"Саудовский риал\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SGD\",\n        \"Cur_ID\": 119,\n        \"Cur_Name\": \"Сингапурcкий доллар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"VND\",\n        \"Cur_ID\": 120,\n        \"Cur_Name\": \"Вьетнамский донг\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SIT\",\n        \"Cur_ID\": 121,\n        \"Cur_Name\": \"Словенский толар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ZAR\",\n        \"Cur_ID\": 123,\n        \"Cur_Name\": \"Южноафриканский рэнд\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ESP\",\n        \"Cur_ID\": 125,\n        \"Cur_Name\": \"Испанская песета\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SDD\",\n        \"Cur_ID\": 126,\n        \"Cur_Name\": \"Суданский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SEK\",\n        \"Cur_ID\": 129,\n        \"Cur_Name\": \"Шведская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"CHF\",\n        \"Cur_ID\": 130,\n        \"Cur_Name\": \"Швейцарский франк\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SYP\",\n        \"Cur_ID\": 131,\n        \"Cur_Name\": \"Сирийский фунт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"THB\",\n        \"Cur_ID\": 132,\n        \"Cur_Name\": \"Таиландский бат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AED\",\n        \"Cur_ID\": 135,\n        \"Cur_Name\": \"Дирхам ОАЭ\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TND\",\n        \"Cur_ID\": 136,\n        \"Cur_Name\": \"Тунисский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TRL\",\n        \"Cur_ID\": 137,\n        \"Cur_Name\": \"Турецкая лира\"\n    },\n    {\n        \"Cur_Abbreviation\": \"UAK\",\n        \"Cur_ID\": 139,\n        \"Cur_Name\": \"Украинский карбованец\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MKD\",\n        \"Cur_ID\": 140,\n        \"Cur_Name\": \"Македонский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"RUR\",\n        \"Cur_ID\": 141,\n        \"Cur_Name\": \"Российский рубль\"\n    },\n    {\n        \"Cur_Abbreviation\": \"EGP\",\n        \"Cur_ID\": 142,\n        \"Cur_Name\": \"Египетский фунт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"GBP\",\n        \"Cur_ID\": 143,\n        \"Cur_Name\": \"Фунт стерлингов\"\n    },\n    {\n        \"Cur_Abbreviation\": \"USD\",\n        \"Cur_ID\": 145,\n        \"Cur_Name\": \"Доллар США\"\n    },\n    {\n        \"Cur_Abbreviation\": \"YUN\",\n        \"Cur_ID\": 150,\n        \"Cur_Name\": \"Югославский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TWD\",\n        \"Cur_ID\": 152,\n        \"Cur_Name\": \"Новый тайваньский доллар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TJR\",\n        \"Cur_ID\": 154,\n        \"Cur_Name\": \"Таджикский рубль\"\n    },\n    {\n        \"Cur_Abbreviation\": \"UZS\",\n        \"Cur_ID\": 155,\n        \"Cur_Name\": \"Узбекский сум\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AMD\",\n        \"Cur_ID\": 156,\n        \"Cur_Name\": \"Армянский драм\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AZM\",\n        \"Cur_ID\": 157,\n        \"Cur_Name\": \"Азербайджанский манат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"XDR\",\n        \"Cur_ID\": 166,\n        \"Cur_Name\": \"СДР \"\n    },\n    {\n        \"Cur_Abbreviation\": \"UAH\",\n        \"Cur_ID\": 169,\n        \"Cur_Name\": \"Украинская гривна\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AUD\",\n        \"Cur_ID\": 170,\n        \"Cur_Name\": \"Австралийский доллар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"CZK\",\n        \"Cur_ID\": 171,\n        \"Cur_Name\": \"Чешская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"EEK\",\n        \"Cur_ID\": 172,\n        \"Cur_Name\": \"Эстонская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"HUF\",\n        \"Cur_ID\": 173,\n        \"Cur_Name\": \"Венгерский форинт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KZT\",\n        \"Cur_ID\": 174,\n        \"Cur_Name\": \"Казахский тенге\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KGS\",\n        \"Cur_ID\": 175,\n        \"Cur_Name\": \"Кыргызский сом\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LVL\",\n        \"Cur_ID\": 176,\n        \"Cur_Name\": \"Латвийский лат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LTL\",\n        \"Cur_ID\": 177,\n        \"Cur_Name\": \"Литовский лит\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MDL\",\n        \"Cur_ID\": 178,\n        \"Cur_Name\": \"Молдавский лей\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ROL\",\n        \"Cur_ID\": 179,\n        \"Cur_Name\": \"Румынский лей\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SKK\",\n        \"Cur_ID\": 180,\n        \"Cur_Name\": \"Словацкая крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TMM\",\n        \"Cur_ID\": 181,\n        \"Cur_Name\": \"Туркменский манат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TJS\",\n        \"Cur_ID\": 182,\n        \"Cur_Name\": \"Таджикский сомони\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AZM\",\n        \"Cur_ID\": 183,\n        \"Cur_Name\": \"Азербайджанский манат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AMD\",\n        \"Cur_ID\": 184,\n        \"Cur_Name\": \"Армянский драм\"\n    },\n    {\n        \"Cur_Abbreviation\": \"YUM\",\n        \"Cur_ID\": 186,\n        \"Cur_Name\": \"Югославский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"GEL\",\n        \"Cur_ID\": 187,\n        \"Cur_Name\": \"Грузинский лари\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PLN\",\n        \"Cur_ID\": 188,\n        \"Cur_Name\": \"Польский злотый\"\n    },\n    {\n        \"Cur_Abbreviation\": \"BRL\",\n        \"Cur_ID\": 189,\n        \"Cur_Name\": \"Бразильский реал\"\n    },\n    {\n        \"Cur_Abbreviation\": \"RUB\",\n        \"Cur_ID\": 190,\n        \"Cur_Name\": \"Российский рубль\"\n    },\n    {\n        \"Cur_Abbreviation\": \"BGN\",\n        \"Cur_ID\": 191,\n        \"Cur_Name\": \"Болгарский лев\"\n    },\n    {\n        \"Cur_Abbreviation\": \"UZS\",\n        \"Cur_ID\": 192,\n        \"Cur_Name\": \"Узбекский сум\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AFA\",\n        \"Cur_ID\": 193,\n        \"Cur_Name\": \"Афгани\"\n    },\n    {\n        \"Cur_Abbreviation\": \"BRL\",\n        \"Cur_ID\": 198,\n        \"Cur_Name\": \"Бразильский реал\"\n    },\n    {\n        \"Cur_Abbreviation\": \"DEM\",\n        \"Cur_ID\": 200,\n        \"Cur_Name\": \"Немецкая марка\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AFA\",\n        \"Cur_ID\": 201,\n        \"Cur_Name\": \"Афгани\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AFA\",\n        \"Cur_ID\": 206,\n        \"Cur_Name\": \"Афгани\"\n    },\n    {\n        \"Cur_Abbreviation\": \"UYU\",\n        \"Cur_ID\": 207,\n        \"Cur_Name\": \"Уругвайское песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PLN\",\n        \"Cur_ID\": 219,\n        \"Cur_Name\": \"Злотый\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TRY\",\n        \"Cur_ID\": 220,\n        \"Cur_Name\": \"Новая турецкая лира\"\n    },\n    {\n        \"Cur_Abbreviation\": \"HUF\",\n        \"Cur_ID\": 221,\n        \"Cur_Name\": \"Форинт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KZT\",\n        \"Cur_ID\": 222,\n        \"Cur_Name\": \"Тенге\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KGS\",\n        \"Cur_ID\": 223,\n        \"Cur_Name\": \"Сом\"\n    },\n    {\n        \"Cur_Abbreviation\": \"UAH\",\n        \"Cur_ID\": 224,\n        \"Cur_Name\": \"Гривна\"\n    },\n    {\n        \"Cur_Abbreviation\": \"EEK\",\n        \"Cur_ID\": 225,\n        \"Cur_Name\": \"Крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AZN\",\n        \"Cur_ID\": 226,\n        \"Cur_Name\": \"Азербайджанский манат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ALL\",\n        \"Cur_ID\": 227,\n        \"Cur_Name\": \"Лек\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AFN\",\n        \"Cur_ID\": 228,\n        \"Cur_Name\": \"Афгани\"\n    },\n    {\n        \"Cur_Abbreviation\": \"VND\",\n        \"Cur_ID\": 229,\n        \"Cur_Name\": \"Донг\"\n    },\n    {\n        \"Cur_Abbreviation\": \"GEL\",\n        \"Cur_ID\": 230,\n        \"Cur_Name\": \"Лари\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LAK\",\n        \"Cur_ID\": 231,\n        \"Cur_Name\": \"Кип\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MNT\",\n        \"Cur_ID\": 232,\n        \"Cur_Name\": \"Тугрик\"\n    },\n    {\n        \"Cur_Abbreviation\": \"NGN\",\n        \"Cur_ID\": 233,\n        \"Cur_Name\": \"Найра\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PEN\",\n        \"Cur_ID\": 234,\n        \"Cur_Name\": \"Новый соль\"\n    },\n    {\n        \"Cur_Abbreviation\": \"RON\",\n        \"Cur_ID\": 235,\n        \"Cur_Name\": \"Новый лей\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TJS\",\n        \"Cur_ID\": 236,\n        \"Cur_Name\": \"Сомони\"\n    },\n    {\n        \"Cur_Abbreviation\": \"THB\",\n        \"Cur_ID\": 237,\n        \"Cur_Name\": \"Бат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ZAR\",\n        \"Cur_ID\": 239,\n        \"Cur_Name\": \"Рэнд\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KRW\",\n        \"Cur_ID\": 240,\n        \"Cur_Name\": \"Вона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"VEB\",\n        \"Cur_ID\": 241,\n        \"Cur_Name\": \"Боливар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MYR\",\n        \"Cur_ID\": 244,\n        \"Cur_Name\": \"Малайзийский ринггит\"\n    },\n    {\n        \"Cur_Abbreviation\": \"RSD\",\n        \"Cur_ID\": 245,\n        \"Cur_Name\": \"Сербский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"IDR\",\n        \"Cur_ID\": 248,\n        \"Cur_Name\": \"Индонезийская рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"HRK\",\n        \"Cur_ID\": 249,\n        \"Cur_Name\": \"Хорватская куна\"\n    },\n    {\n        \"Cur_Abbreviation\": \"CNY\",\n        \"Cur_ID\": 250,\n        \"Cur_Name\": \"Юань Ренминби\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MXN\",\n        \"Cur_ID\": 251,\n        \"Cur_Name\": \"Мексиканское песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"CNY\",\n        \"Cur_ID\": 254,\n        \"Cur_Name\": \"Китайский юань\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TRY\",\n        \"Cur_ID\": 256,\n        \"Cur_Name\": \"Турецкая лира\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TMM\",\n        \"Cur_ID\": 257,\n        \"Cur_Name\": \"Манат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"VEF\",\n        \"Cur_ID\": 259,\n        \"Cur_Name\": \"Боливар фуэрте\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TMT\",\n        \"Cur_ID\": 260,\n        \"Cur_Name\": \"Новый манат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SDG\",\n        \"Cur_ID\": 262,\n        \"Cur_Name\": \"Суданский фунт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"IRR\",\n        \"Cur_ID\": 264,\n        \"Cur_Name\": \"Иранский риал\"\n    },\n    {\n        \"Cur_Abbreviation\": \"GEK\",\n        \"Cur_ID\": 265,\n        \"Cur_Name\": \"Грузинский купон\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LBP\",\n        \"Cur_ID\": 266,\n        \"Cur_Name\": \"Ливанский фунт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TRL\",\n        \"Cur_ID\": 267,\n        \"Cur_Name\": \"Турецкая лира\"\n    },\n    {\n        \"Cur_Abbreviation\": \"UAK\",\n        \"Cur_ID\": 268,\n        \"Cur_Name\": \"Украинский карбованец\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TJR\",\n        \"Cur_ID\": 269,\n        \"Cur_Name\": \"Таджикский рубль\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AMD\",\n        \"Cur_ID\": 270,\n        \"Cur_Name\": \"Армянский драм\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AZM\",\n        \"Cur_ID\": 271,\n        \"Cur_Name\": \"Азербайджанский манат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ROL\",\n        \"Cur_ID\": 272,\n        \"Cur_Name\": \"Румынский лей\"\n    },\n    {\n        \"Cur_Abbreviation\": \"RON\",\n        \"Cur_ID\": 273,\n        \"Cur_Name\": \"Новый румынский лей\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TMT\",\n        \"Cur_ID\": 274,\n        \"Cur_Name\": \"Новый туркменский манат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"JPY\",\n        \"Cur_ID\": 277,\n        \"Cur_Name\": \"Йена\"\n    },\n    {\n        \"Cur_Abbreviation\": \"XDR\",\n        \"Cur_ID\": 278,\n        \"Cur_Name\": \"СДР (Специальные права заимствования)\"\n    },\n    {\n        \"Cur_Abbreviation\": \"VEF\",\n        \"Cur_ID\": 279,\n        \"Cur_Name\": \"Боливар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"IDR\",\n        \"Cur_ID\": 280,\n        \"Cur_Name\": \"Рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MKD\",\n        \"Cur_ID\": 281,\n        \"Cur_Name\": \"Денар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SAR\",\n        \"Cur_ID\": 282,\n        \"Cur_Name\": \"Саудовский риял\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LKR\",\n        \"Cur_ID\": 283,\n        \"Cur_Name\": \"Шри-ланкийская рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"NZD\",\n        \"Cur_ID\": 286,\n        \"Cur_Name\": \"Новозеландский доллар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"RON\",\n        \"Cur_ID\": 287,\n        \"Cur_Name\": \"Румынский лей\"\n    },\n    {\n        \"Cur_Abbreviation\": \"HRK\",\n        \"Cur_ID\": 288,\n        \"Cur_Name\": \"Куна\"\n    },\n    {\n        \"Cur_Abbreviation\": \"UAH\",\n        \"Cur_ID\": 290,\n        \"Cur_Name\": \"Гривна\"\n    },\n    {\n        \"Cur_Abbreviation\": \"DKK\",\n        \"Cur_ID\": 291,\n        \"Cur_Name\": \"Датская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"EUR\",\n        \"Cur_ID\": 292,\n        \"Cur_Name\": \"Евро\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PLN\",\n        \"Cur_ID\": 293,\n        \"Cur_Name\": \"Злотый\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ISK\",\n        \"Cur_ID\": 294,\n        \"Cur_Name\": \"Исландская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"JPY\",\n        \"Cur_ID\": 295,\n        \"Cur_Name\": \"Йена\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MDL\",\n        \"Cur_ID\": 296,\n        \"Cur_Name\": \"Молдавский лей\"\n    },\n    {\n        \"Cur_Abbreviation\": \"NOK\",\n        \"Cur_ID\": 297,\n        \"Cur_Name\": \"Норвежская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"RUB\",\n        \"Cur_ID\": 298,\n        \"Cur_Name\": \"Российский рубль\"\n    },\n    {\n        \"Cur_Abbreviation\": \"XDR\",\n        \"Cur_ID\": 299,\n        \"Cur_Name\": \"СДР (Специальные права заимствования)\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KGS\",\n        \"Cur_ID\": 300,\n        \"Cur_Name\": \"Сом\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KZT\",\n        \"Cur_ID\": 301,\n        \"Cur_Name\": \"Тенге\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TRY\",\n        \"Cur_ID\": 302,\n        \"Cur_Name\": \"Турецкая лира\"\n    },\n    {\n        \"Cur_Abbreviation\": \"IRR\",\n        \"Cur_ID\": 303,\n        \"Cur_Name\": \"Иранский риал\"\n    },\n    {\n        \"Cur_Abbreviation\": \"CNY\",\n        \"Cur_ID\": 304,\n        \"Cur_Name\": \"Китайский юань\"\n    },\n    {\n        \"Cur_Abbreviation\": \"CZK\",\n        \"Cur_ID\": 305,\n        \"Cur_Name\": \"Чешская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SEK\",\n        \"Cur_ID\": 306,\n        \"Cur_Name\": \"Шведская крона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"DZD\",\n        \"Cur_ID\": 307,\n        \"Cur_Name\": \"Алжирский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ARS\",\n        \"Cur_ID\": 308,\n        \"Cur_Name\": \"Аргентинское песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AFN\",\n        \"Cur_ID\": 309,\n        \"Cur_Name\": \"Афгани\"\n    },\n    {\n        \"Cur_Abbreviation\": \"THB\",\n        \"Cur_ID\": 310,\n        \"Cur_Name\": \"Бат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"VEF\",\n        \"Cur_ID\": 311,\n        \"Cur_Name\": \"Боливар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"BRL\",\n        \"Cur_ID\": 312,\n        \"Cur_Name\": \"Бразильский реал\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KRW\",\n        \"Cur_ID\": 313,\n        \"Cur_Name\": \"Вона\"\n    },\n    {\n        \"Cur_Abbreviation\": \"HKD\",\n        \"Cur_ID\": 314,\n        \"Cur_Name\": \"Гонконгский доллар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MKD\",\n        \"Cur_ID\": 315,\n        \"Cur_Name\": \"Денар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AED\",\n        \"Cur_ID\": 316,\n        \"Cur_Name\": \"Дирхам ОАЭ\"\n    },\n    {\n        \"Cur_Abbreviation\": \"VND\",\n        \"Cur_ID\": 317,\n        \"Cur_Name\": \"Донг\"\n    },\n    {\n        \"Cur_Abbreviation\": \"EGP\",\n        \"Cur_ID\": 318,\n        \"Cur_Name\": \"Египетский фунт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"INR\",\n        \"Cur_ID\": 319,\n        \"Cur_Name\": \"Индийская рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"IQD\",\n        \"Cur_ID\": 320,\n        \"Cur_Name\": \"Иракcкий динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"KES\",\n        \"Cur_ID\": 321,\n        \"Cur_Name\": \"Кенийский шиллинг\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LAK\",\n        \"Cur_ID\": 322,\n        \"Cur_Name\": \"Кип\"\n    },\n    {\n        \"Cur_Abbreviation\": \"COP\",\n        \"Cur_ID\": 323,\n        \"Cur_Name\": \"Колумбийское песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"HRK\",\n        \"Cur_ID\": 324,\n        \"Cur_Name\": \"Куна\"\n    },\n    {\n        \"Cur_Abbreviation\": \"GEL\",\n        \"Cur_ID\": 325,\n        \"Cur_Name\": \"Лари\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ALL\",\n        \"Cur_ID\": 326,\n        \"Cur_Name\": \"Лек\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MYR\",\n        \"Cur_ID\": 327,\n        \"Cur_Name\": \"Малайзийский ринггит\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MAD\",\n        \"Cur_ID\": 328,\n        \"Cur_Name\": \"Марокканский дирхам\"\n    },\n    {\n        \"Cur_Abbreviation\": \"MXN\",\n        \"Cur_ID\": 329,\n        \"Cur_Name\": \"Мексиканское песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"NGN\",\n        \"Cur_ID\": 330,\n        \"Cur_Name\": \"Найра\"\n    },\n    {\n        \"Cur_Abbreviation\": \"NPR\",\n        \"Cur_ID\": 331,\n        \"Cur_Name\": \"Непальcкая рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ILS\",\n        \"Cur_ID\": 332,\n        \"Cur_Name\": \"Новый израильский шекель\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PEN\",\n        \"Cur_ID\": 333,\n        \"Cur_Name\": \"Соль\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TWD\",\n        \"Cur_ID\": 334,\n        \"Cur_Name\": \"Новый тайваньский доллар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TMT\",\n        \"Cur_ID\": 335,\n        \"Cur_Name\": \"Новый туркменский манат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PKR\",\n        \"Cur_ID\": 336,\n        \"Cur_Name\": \"Пакистанская рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"RON\",\n        \"Cur_ID\": 337,\n        \"Cur_Name\": \"Румынский лей\"\n    },\n    {\n        \"Cur_Abbreviation\": \"IDR\",\n        \"Cur_ID\": 338,\n        \"Cur_Name\": \"Рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ZAR\",\n        \"Cur_ID\": 339,\n        \"Cur_Name\": \"Рэнд\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SAR\",\n        \"Cur_ID\": 340,\n        \"Cur_Name\": \"Саудовский риял\"\n    },\n    {\n        \"Cur_Abbreviation\": \"RSD\",\n        \"Cur_ID\": 341,\n        \"Cur_Name\": \"Сербский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SYP\",\n        \"Cur_ID\": 342,\n        \"Cur_Name\": \"Сирийский фунт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TJS\",\n        \"Cur_ID\": 343,\n        \"Cur_Name\": \"Сомони\"\n    },\n    {\n        \"Cur_Abbreviation\": \"SDG\",\n        \"Cur_ID\": 344,\n        \"Cur_Name\": \"Суданский фунт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"UZS\",\n        \"Cur_ID\": 345,\n        \"Cur_Name\": \"Узбекский сум\"\n    },\n    {\n        \"Cur_Abbreviation\": \"UYU\",\n        \"Cur_ID\": 346,\n        \"Cur_Name\": \"Уругвайское песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"PHP\",\n        \"Cur_ID\": 347,\n        \"Cur_Name\": \"Филиппинcкое песо\"\n    },\n    {\n        \"Cur_Abbreviation\": \"HUF\",\n        \"Cur_ID\": 348,\n        \"Cur_Name\": \"Форинт\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LKR\",\n        \"Cur_ID\": 349,\n        \"Cur_Name\": \"Шри-ланкийская рупия\"\n    },\n    {\n        \"Cur_Abbreviation\": \"ETB\",\n        \"Cur_ID\": 350,\n        \"Cur_Name\": \"Эфиопский быр\"\n    },\n    {\n        \"Cur_Abbreviation\": \"TND\",\n        \"Cur_ID\": 351,\n        \"Cur_Name\": \"Тунисский динар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"LAK\",\n        \"Cur_ID\": 352,\n        \"Cur_Name\": \"Лаосский кип\"\n    },\n    {\n        \"Cur_Abbreviation\": \"AZN\",\n        \"Cur_ID\": 353,\n        \"Cur_Name\": \"Азербайджанский манат\"\n    },\n    {\n        \"Cur_Abbreviation\": \"VES\",\n        \"Cur_ID\": 354,\n        \"Cur_Name\": \"Суверенный боливар\"\n    },\n    {\n        \"Cur_Abbreviation\": \"JPY\",\n        \"Cur_ID\": 355,\n        \"Cur_Name\": \"Иена\"\n    },\n    {\n        \"Cur_Abbreviation\": \"VES\",\n        \"Cur_ID\": 356,\n        \"Cur_Name\": \"Суверенный боливар\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "curr_byn req.",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": null
+					},
+					"response": [
+						{
+							"name": "curr_byn req.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "auth_token",
+											"value": "\"/s34lfgbj/None/jjd909/48182kjkWpqc3055None197972evny\"",
+											"type": "text"
+										},
+										{
+											"key": "curr_code",
+											"value": "27",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://116.203.27.46:5002/curr_byn",
+									"protocol": "http",
+									"host": [
+										"116",
+										"203",
+										"27",
+										"46"
+									],
+									"port": "5002",
+									"path": [
+										"curr_byn"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "234"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.15.6 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jun 2021 11:36:57 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Cur_Abbreviation\": \"CLP\",\n    \"Cur_ID\": 27,\n    \"Cur_Name\": \"Чилийских песо\",\n    \"Cur_OfficialRate\": 3.4959,\n    \"Cur_Scale\": 1000,\n    \"Date\": \"2021-06-10T00:00:00\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
